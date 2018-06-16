@@ -6,6 +6,8 @@ var table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 var cart = [];
 
+var tbodyEl = document.getElementsByTagName('tbody')[0];
+
 function loadCart() {
   cart = JSON.parse(localStorage.getItem('cart')) || [];
 }
@@ -28,7 +30,7 @@ function clearCart() {
 function showCart() {
 
 // TODO: Find the table body
-var tbodyEl = document.getElementsByTagName('tbody')[0];
+
 // TODO: Iterate over the items in the cart
     for(var i in cart) {
         // TODO: Create a TR
