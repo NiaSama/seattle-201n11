@@ -1,1 +1,10 @@
 /* TODO: Make it awesome */
+input {
+  background-color: #c1867b;
+  border: none;
+  color: white;
+  padding: 1px 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}

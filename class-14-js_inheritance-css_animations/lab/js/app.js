@@ -1,28 +1,39 @@
 'use strict';
 
-// Cart constructor.
-var Cart = function (items) {
-    // this.items is an array of CartItem instances.
-    this.items = items;
-};
+// // Cart constructor.
+// var Cart = function (items) {
+//     // this.items is an array of CartItem instances.
+//     this.items = items;
+// };
 
-Cart.prototype.addItem = function (product, quantity) {
-    // TODO: Fill in this instance method to create a new CartItem and add it to this.items
-};
+// Cart.prototype.addItem = function (product, quantity) {
+//     // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+//     this.CartItem = new CartItem(product, quantity);
+// };
 
-Cart.prototype.saveToLocalStorage = function () {
-    // TODO: Fill in this instance method to save the contents of the cart to localStorage
-};
+// Cart.prototype.saveToLocalStorage = function () {
+//     // TODO: Fill in this instance method to save the contents of the cart to localStorage
+//     localStorage.setItem('cart', JSON.stringify(this.CartItem));
+// };
 
-Cart.prototype.removeItem = function (item) {
-    // TODO: Fill in this instance method to remove one item from the cart.
-    // Note: You will have to decide what kind of parameter to pass in here!
-};
+// // Cart.prototype.removeItem = function (item) {
+//     // TODO: Fill in this instance method to remove one item from the cart.
+//     // Note: You will have to decide what kind of parameter to pass in here!
+    
+// // };
 
-var CartItem = function (product, quantity) {
-    this.product = product;
+// var CartItem = function (product, quantity) {
+//     this.product = product;
+//     this.quantity = quantity;
+// };
+
+var Cart = function(name, filePath, quantity) {
+    this.name = name;
+    this.filePath = filePath;
     this.quantity = quantity;
-};
+    Cart.allInCart.push(this);
+  };
+  Cart.allInCart = [];
 
 // Product contructor.
 var Product = function (filePath, name) {
